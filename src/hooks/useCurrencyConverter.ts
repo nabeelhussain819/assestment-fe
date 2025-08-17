@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Currency, ConversionResult, ConversionRecord } from '../types/currency';
 
-const API_BASE_URL = 'http://localhost:5000/api/currency';
+const LOCAL_API_BASE_URL = 'http://localhost:5000/api/currency';
+const API_BASE_URL = 'https://assestment-be-gnyb.vercel.app/api/currency';
 
 export const useCurrencyConverter = () => {
   const [currencies, setCurrencies] = useState<Currency[]>([]);
